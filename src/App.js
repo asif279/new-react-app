@@ -1,4 +1,5 @@
 //import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -6,10 +7,24 @@ function App() {
 
  <header className='App-header'>
   <DivisionBox name="rubel"></DivisionBox>
+  <MovieCounter></MovieCounter>
 </header>
   
   );
 }
+
+function MovieCounter(){
+let [count,setCount]= useState(0);
+const handleClick = ()=>setCount(count +1)
+  return(
+<div>
+  <button onClick={handleClick}>AddMovies</button>
+  <h3>Number of Movie: {count}</h3>
+</div>
+
+  )
+}
+
 
 function DivisionBox(props){
   const divisionStyle ={
