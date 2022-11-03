@@ -1,32 +1,33 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h2>IUb</h2>
-        <h4>hey sundori nari tmk valobashi kikur</h4>
-        <div id="div">
-          <h2>hey how are you
-            <p>Hey dustur nari tmk valobashi</p>
-          </h2>
-        </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+ <header className='App-header'>
+  <DivisionBox name="rubel"></DivisionBox>
+</header>
+  
   );
 }
+
+function DivisionBox(props){
+  const divisionStyle ={
+    border:'2px solid gray',
+    margin:'10px',padding:'10px',
+    borderRadius:'7px',backgroundColor:'lightgray',
+  width:'400px',
+  height:'200px'
+  }
+  return (
+    <div style={divisionStyle}>
+      <h1>Nayok:{props.name}</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, eligendi!</p>
+    </div>
+
+  )
+}
+
+
 
 export default App;
